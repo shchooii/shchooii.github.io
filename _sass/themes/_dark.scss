@@ -32,11 +32,11 @@
   );
 
   /* Sidebar */
-  --site-title-color: #717070;
-  --site-subtitle-color: #868686;
-  --sidebar-bg: #1e1e1e;
+  --site-title-color: rgb(200, 200, 200);
+  --site-subtitle-color: rgb(200, 200, 200);
+  --sidebar-bg: url('/assets/img/sidebar-bg-img-dark.png') no-repeat 52% center / cover;
   --sidebar-border-color: #292929;
-  --sidebar-muted-color: #868686;
+  --sidebar-muted-color: rgb(200, 200, 200);
   --sidebar-active-color: rgb(255, 255, 255, 0.95);
   --sidebar-hover-bg: #262626;
   --sidebar-btn-bg: #232328;
