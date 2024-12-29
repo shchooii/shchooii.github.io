@@ -8,7 +8,7 @@ tags: ['SpringBootApplication', 'Bean']
 ## Start Spring
 
 
-Spring이란 Java 기반 오픈소스 웹 Framework입니다. Framework는 Library와 달리 IoC(Inversion of Control)를 통해 코드 변경을 최소화해주고, 다양한 상황에 맞도록 코드 구성을 도와줍니다. ==🔵Spring을 통해 개발자는 비지니스 로직에 집중하여 효율적으로 개발할 수 있습니다.==
+Spring이란 Java 기반 오픈소스 웹 Framework입니다. Framework는 Library와 달리 IoC(Inversion of Control)를 통해 코드 변경을 최소화해주고, 다양한 상황에 맞도록 코드 구성을 도와줍니다. Spring을 통해 개발자는 비지니스 로직에 집중하여 효율적으로 개발할 수 있습니다.
 
 
 Spring Framework는 Configuration 설정, Dependency를 하나하나 직접 관리해야 하는 어려움이 있습니다. Spring Boot는 이를 자동으로 관리해주고, Convention을 통해 코드의 가독성과 일관성에 도움을 줍니다.
@@ -46,7 +46,7 @@ public @interface SpringBootApplication {}
 3. @ComponentScan
    1. ComponentScan을 수행하고 Bean을 등록합니다.
 
-==🟡"Bean을 등록한다"==는 Spring Container에 Bean을 등록하고, Bean으로 등록된 객체는 Spring Container의 관리 대상이 됩니다. Container에서는 객체를 생성하고 생명 주기 관리, DI (Depenendcy Injection), AOP, 등의 기능을 제공합니다. 
+"Bean을 등록한다"는 Spring Container에 Bean을 등록하고, Bean으로 등록된 객체는 Spring Container의 관리 대상이 됩니다. Container에서는 객체를 생성하고 생명 주기 관리, DI (Depenendcy Injection), AOP, 등의 기능을 제공합니다. 
 
 
 @Bean은 method level에서 사용되며, @Configuration annotation에 있는 클래스에 있어야 합니다. Spring이 제공하는 자동 스캔 기능을 사용하지 않고, 개발자가 직접 Bean을 정의하는 방법입니다.
