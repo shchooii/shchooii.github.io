@@ -23,6 +23,9 @@ description: >- # used by seo meta and the atom feed
   
 # Fill in the protocol & hostname for your site.
 url: "https://cshooon.github.io"
+plugins:
+  - jekyll-sitemap
+
 
 github:
   username: cshooon # change to your GitHub username
