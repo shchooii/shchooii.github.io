@@ -1,6 +1,6 @@
 ---
 title: Spring Servlet
-date: 2024-12-29 16:22:05 +09:00
+date: 2025-01-14 16:22:05 +09:00
 categories: ['spring']
 tags: ['HttpServlet', 'DispatcherServlet']
 ---
