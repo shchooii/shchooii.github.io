@@ -1,11 +1,11 @@
 ---
-title: Start Spring
+title: Spring Start
 date: 2024-12-29 14:25:03 +09:00
 categories: ['spring']
 tags: ['SpringBootApplication', 'Bean']
 ---
 
-## Start Spring
+## Spring Start
 
 
 Spring이란 Java 기반 오픈소스 웹 Framework입니다. Framework는 Library와 달리 IoC(Inversion of Control)를 통해 코드 변경을 최소화해주고, 다양한 상황에 맞도록 코드 구성을 도와줍니다. Spring을 통해 개발자는 비지니스 로직에 집중하여 효율적으로 개발할 수 있습니다.
