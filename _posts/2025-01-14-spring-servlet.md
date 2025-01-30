@@ -47,7 +47,7 @@ HTTP 요청은 클라이언트가 서버에 데이터를 보내는 방식으로,
 
 아래는 doPost()의 코드입니다. HttpServletReqeust, HttpServletResponse를 받습니다. doGet(), doPost(), 등을 오버라이딩해 핵심 비즈니스 로직을 작성하게 실행합니다.
 
-```Java
+```java
 protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String msg = lStrings.getString("http.method_post_not_supported");
         this.sendMethodNotAllowed(req, resp, msg);
@@ -68,7 +68,7 @@ HTTP 요청 메시지를 개발자가 직접 파싱해서 사용해도 되지만
 
 Client 입장에서는 두 방식에 차이가 있지만, Server 입장에서는 둘의 형식이 동일하므로, 1번과 2번은 `request.getParameter()`로 조회할 수 있습니다.
 
-```Java
+```java
 String username = request.getParameter("username");
 String age = request.getParameter("age");
 ```
@@ -76,7 +76,7 @@ String age = request.getParameter("age");
 3번은 다음과 같습니다.
 Response 부분은 HttpServletResponse 부분에서 설명드리겠습니다.
 
-```Java
+```java
 @WebServlet("/json")
 public class JsonRequestServlet extends HttpServlet {
     @Override
@@ -93,7 +93,7 @@ public class JsonRequestServlet extends HttpServlet {
 
 `doPost()`에서 HTTP 응답을 반환할 때, `response.getOutputStream().write()`를 사용합니다. HTML 응답의 경우, Content-Type을 text/html로 설정한 후, HTML 문자열을 UTF-8로 변환하여 OutputStream을 통해 반환합니다. 이렇게 하면 Client (웹 브라우저)가 응답을 HTML로 해석하고 렌더링할 수 있습니다. 
 
-```Java
+```java
 @WebServlet(name = "responseHtmlServlet", urlPatterns = "/response-html")
 public class ResponseHtmlServlet extends HttpServlet {
     @Override
@@ -110,7 +110,7 @@ public class ResponseHtmlServlet extends HttpServlet {
 
 JSON 응답의 경우, ObjectMapper를 이용해 Java 객체를 JSON 문자열로 변환한 후, `response.getOutputStream().write()`로 반환합니다.
 
-```Java
+```java
 @WebServlet(name = "responseJsonServlet", urlPatterns = "/response-json")
 public class ResponseJsonServlet extends HttpServlet {
     private final ObjectMapper objectMapper = new ObjectMapper();
@@ -146,7 +146,7 @@ Spring MVC는 내부적으로 Servlet을 기반으로 동작하며, `DispatcherS
 
 다음은 SpringMVC 사용 예시입니다.
 
-```Java
+```java
 @RestController
 public class HelloController {
 @GetMapping("/hello")
