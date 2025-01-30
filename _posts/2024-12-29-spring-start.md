@@ -27,7 +27,7 @@ public class StartSpringApplication {
 ```
 
 
-Framework는 코드 변경을 최소화해주지만, 제공되는 흐름에 맞게 코드를 구성해야 합니다. Java처럼 클래스 안에 main 메서드 안에 `SpringApplication.run()`를 통해 Application을 실행합니다. 그 전에 @SpringBootApplication 부분에서 Configuration을 설정하고, ComponentScan을 수행합니다.
+Framework는 코드 변경을 최소화해주지만, 제공되는 흐름에 맞게 코드를 구성해야 합니다. Java 클래스의 main 메서드 안에 `SpringApplication.run()`를 통해 Application이 실행됩니다. 여기서 생략된 과정이 있는데, Annotation 부분입니다. @SpringBootApplication Annotation에서 Configuration을 설정하고, ComponentScan을 수행합니다.
 
 
 ```java
@@ -53,4 +53,8 @@ public @interface SpringBootApplication {}
 
 
 @Component는 class level에서 사용되며, Spring이 자동으로 Bean을 등록합니다. @Service, @Repository, @Controller도 내부에 @Component를 포함하고 있어, 자동으로 Bean이 등록됩니다. 
+
+
+> 지금까지 @SpringBootApplication 코드가 어떻게 구성되어 있는지 살펴보았습니다. 
+> >Spring Boot는 개발자가 일일이 설정을 하지 않아도 자동으로 Configuration을 적용하고, @ComponentScan을 통해 필요한 Bean을 등록하며, @EnableAutoConfiguration을 통해 적절한 환경을 설정해 줍니다. 이를 통해 개발자는 Boilerplate Code를 줄이고, 비즈니스 로직에 더욱 집중할 수 있습니다.
 
