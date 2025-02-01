@@ -2,7 +2,7 @@
 title: Spring MVC
 date: 2025-01-17 17:15:07 +09:00
 categories: ['spring']
-tags: ['HttpServlet', 'DispatcherServlet']
+tags: ['SpringMVC', 'FrontController', 'DispatcherServlet']
 ---
 
 # Spring MVC
