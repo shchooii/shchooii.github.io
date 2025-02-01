@@ -147,7 +147,7 @@ spring.thymeleaf.suffix=.html
 
 ViewResolver가 home.html을 찾아서 렌더링합니다.
 
-### Front Controller 패턴 적용 시 개선점
+## Front Controller 패턴 적용 시 개선점
 
 | 구분 | 기존 방식 (각 서블릿 개별 처리) | Front Controller 패턴 적용 |
 |------|--------------------------------|----------------------------|
