@@ -156,3 +156,6 @@ public String hello(@RequestParam String name) {
 }
 ```
 
+> `Servlet`은 Java 웹 애플리케이션에서 클라이언트 요청을 처리하고 응답을 반환하는 중요한 역할을 합니다. `HttpServlet`을 상속하여 직접 구현하면 요청을 파싱하고, 비즈니스 로직을 수행한 뒤, 적절한 응답을 반환할 수 있습니다. 이를 통해 `GET`, `POST` 요청을 처리하고, HTML 또는 JSON 데이터를 클라이언트에 제공할 수 있습니다.
+> 
+> 나아가 `Spring MVC`는 `DispatcherServlet`을 통해 이러한 과정을 효율적으로 처리할 수 있도록 도와주며, URL 매핑, 요청 처리, 응답 반환을 간결하게 구성할 수 있는 프레임워크를 제공합니다.
