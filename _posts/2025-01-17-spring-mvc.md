@@ -60,7 +60,7 @@ Spring MVC에서는 `DispatcherServlet`이 이 역할을 수행합니다.
 
 ## Spring MVC DispatcherServlet
 
-## 1️⃣ DispatcherServlet이 모든 요청을 받아 처리함
+### 1️⃣ DispatcherServlet이 모든 요청을 받아 처리함
 Spring Boot에서는 `DispatcherServlet`이 자동으로 설정돼 있습니다. 
 아래 코드는 수동 설정 코드입니다.
 
