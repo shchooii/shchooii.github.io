@@ -2,7 +2,7 @@
 title: Spring Start
 date: 2024-12-29 14:25:03 +09:00
 categories: ['spring']
-tags: ['SpringBootApplication', 'Bean']
+tags: ['@SpringBootApplication', '@Bean']
 ---
 
 ## Spring Start
