@@ -1,6 +1,6 @@
 ---
 title: Spring MVC Basic
-date: 2025-01-17 13:20:05 +09:00
+date: 2025-01-21 14:25:15 +09:00
 categories: ['spring']
 tags: ['SpringMVC', '@RequestMapping', '@RequestBody', '@ResponseBody']
 ---
