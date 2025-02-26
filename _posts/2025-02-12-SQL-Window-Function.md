@@ -1,7 +1,7 @@
 ---
 title: SQL Window Function
 date: 2025-02-12 12:35:16 +09:00
-categories: ['SQL']
+categories: ['sql']
 tags: ['MySQL', 'Window Function']
 ---
 
