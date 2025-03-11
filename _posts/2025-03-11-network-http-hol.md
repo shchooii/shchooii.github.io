@@ -102,7 +102,7 @@ sequenceDiagram
   participant 클라이언트
   participant 서버
   
-  Note over 클라이언트, 서버: Connection: close를 사용한 연결 종료
+  Note over 클라이언트, 서버: Connection: close를 사용, 연결 종료
   클라이언트->>서버: GET /final HTTP/1.1<br/>Connection: close
   Note over 클라이언트: 클라이언트가 연결 종료<br/>의도를 신호함
   서버->>클라이언트: HTTP/1.1 200 OK<br/>Connection: close
