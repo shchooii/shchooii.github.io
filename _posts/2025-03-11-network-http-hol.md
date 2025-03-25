@@ -7,8 +7,6 @@ mermaid: true
 ---
 
 
-# HTTP란?
-
 Hypertext Transfer Protocol(HTTP)는 클라이언트와 서버 간의 통신 규칙, 프로토콜입니다. 
 웹 애플리케이션이 발전함에 따라 초기 HTTP 버전의 한계가 나타났습니다.
 이는 네트워크 리소스의 비효율적인 사용과 Head-of-Line(HOL) 블로킹 문제입니다.

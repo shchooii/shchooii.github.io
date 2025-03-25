@@ -5,7 +5,6 @@ categories: ['spring']
 tags: ['SpringMVC', '@RequestMapping', '@RequestBody', '@ResponseBody']
 ---
 
-# Spring MVC Basic
 
 이번 글에서는 Spring MVC의 컨트롤러 기본 기능을 정리해보겠습니다.
 기본 기능으로는 **요청을 컨트롤러에 매핑하는 기능**과 **데이터를 주고받는 기능**이 있습니다.

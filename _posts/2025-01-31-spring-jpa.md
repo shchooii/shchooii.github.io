@@ -5,7 +5,6 @@ categories: ['spring']
 tags: ['SpringJPA', '@Entity', '@XToOne', '@OneToMany']
 ---
 
-# Spring JPA
 
 JPA (Java Persistent API)는 자바 객체와 관계형 데이터베이스 간의 매핑을 도와줍니다. 
 이를 통해 SQL 문을 작성하지 않고 객체를 다루는 것처럼 데이터를 관리할 수 있습니다.

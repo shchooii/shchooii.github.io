@@ -5,7 +5,6 @@ categories: ['spring']
 tags: ['SpringMVC', 'FrontController', 'DispatcherServlet']
 ---
 
-# Spring MVC Architecture
 ## FrontController pattern
 ### Background
 웹 애플리케이션에서 사용자의 요청을 처리하는 기본적인 방식은 서블릿(Servlet)을 활용하는 것입니다.

@@ -5,7 +5,6 @@ categories: ['sql']
 tags: ['MySQL', 'Window Function']
 ---
 
-# SQL Window Function
 
 SQL에서 데이터를 다룰 때, 단순한 그룹화와 집계 함수만으로 원하는 결과를 얻기 어려운 경우가 많습니다. 
 특정 범위 내에서 순위를 매기거나 누적 합을 계산하는 등 보다 정교한 분석이 필요할 때 윈도우 함수(Window Functions)를 사용합니다. 

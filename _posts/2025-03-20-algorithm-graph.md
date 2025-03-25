@@ -6,7 +6,6 @@ tags: ['graph', 'BFS', 'DFS', 'Dijkstra']
 mermaid: true
 ---
 
-# 그래프 탐색 및 최단 경로 알고리즘
 
 ## 머리말
 

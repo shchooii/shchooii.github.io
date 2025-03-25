@@ -5,7 +5,6 @@ categories: ['spring']
 tags: ['HttpServlet', 'DispatcherServlet']
 ---
 
-# Spring Servlet
 Servlet은 Java 기반의 웹 애플리케이션에서 클라이언트의 요청을 처리하고 응답을 생성하는 Server-side components입니다.
 다음은 chatgpt 웹사이트 request 요청입니다.
 
