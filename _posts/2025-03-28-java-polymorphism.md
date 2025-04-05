@@ -5,7 +5,6 @@ categories: ['java']
 tags: ['abstract', 'interface', 'polymorphism', 'OCP']
 ---
 
-## 머리말
 소프트웨어 설계에서 **역할**과 **구현**을 분리하는 것은 매우 중요합니다. 
 이 둘을 분리하면, 구현체를 손쉽게 교체할 수 있고 기존 코드를 최소한으로만 수정할 수 있기 때문입니다. 
 이러한 설계 원칙을 **OCP(Open-Closed Principle)**라고 부릅니다.
