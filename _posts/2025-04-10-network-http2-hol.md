@@ -6,7 +6,7 @@ tags: ['HTTP', 'HOL blocking', 'HTTP/2']
 mermaid: true
 ---
 
-인터넷이 대중화되고 웹 애플리케이션이 점차 복잡해짐에 따라, 더 빠르고 효율적인 통신 프로토콜에 대한 수요가 크게 늘어났습니다. 전통적으로 사용되던 HTTP/1.1 프로토콜은 단순성과 호환성이 뛰어났지만, 오늘날과 같은 방대한 데이터를 처리하는 데 한계를 보였습니다. 이러한 문제점을 해결하기 위해 등장한 것이 HTTP/2입니다. 특히 HTTP/1.1에서 발생하던 HOL(Head of Line) Blocking 문제를 해결함으로써 웹 성능을 개선하였는데, 아래에서는 HTTP/2가 HOL Blocking 문제를 어떻게 해결하는지 그 원리와 주요 특징을 살펴보겠습니다.
+인터넷이 대중화되고 웹 애플리케이션이 복잡해짐에 따라, 더 빠르고 효율적인 통신 프로토콜에 대한 수요가 늘어났습니다. 전통적으로 사용되던 HTTP/1.1 프로토콜은 단순성과 호환성이 뛰어났지만, 오늘날과 같은 방대한 데이터를 처리하는 데 한계를 보였습니다. 이러한 문제점을 해결하기 위해 등장한 것이 HTTP/2입니다. 특히 HTTP/1.1에서 발생하던 HOL(Head of Line) Blocking 문제를 해결함으로써 웹 성능을 개선하였는데, 아래에서는 HTTP/2가 HOL Blocking 문제를 어떻게 해결하는지 그 원리와 주요 특징을 살펴보겠습니다.
 
 ## HTTP/1.1의 HOL Blocking 문제
 
@@ -50,23 +50,31 @@ sequenceDiagram
     participant C as 클라이언트
     participant S as 서버
 
-    rect 멀티플렉싱
+    Note over C,S: HTTP/2 단일 TCP 연결에서<br/>멀티플렉싱 및 스트리밍 과정
+
     C->>S: HEADERS (Stream 1) - GET /large-image.jpg
     C->>S: HEADERS (Stream 3) - GET /small-text.txt
-    end
+    Note over C,S: 서버는 여러 스트림의 요청을 인지
 
-    Note over C,S: 여러 요청을 <b>병렬</b>로 전송하기 때문에 HOL Blocking이 감소함
-
-    rect 스트리밍
     S->>C: HEADERS (Stream 3) - 200 OK
-    S->>C: DATA (Stream 3) - 텍스트 데이터
+    S->>C: DATA (Stream 3) - 텍스트 청크 #1
+    S->>C: DATA (Stream 3) - 텍스트 청크 #2
+    Note over C,S: 작은 텍스트 파일(Stream 3)은<br/>빠르게 전송 완료
+
     S->>C: HEADERS (Stream 1) - 200 OK
-    S->>C: DATA (Stream 1) - 이미지 데이터 (조각 1)
-    S->>C: DATA (Stream 1) - 이미지 데이터 (조각 2)
-    end
+    S->>C: DATA (Stream 1) - 이미지 청크 #1
+    S->>C: DATA (Stream 1) - 이미지 청크 #2
+    S->>C: DATA (Stream 1) - 이미지 청크 #3
+    Note over C,S: 대용량 이미지(Stream 1)는<br/>여러 청크로 나뉘어<br/>지속 전송
 
-    Note over C,S: 리소스를 <b>조각 단위</b>로 전송받으므로, 작은 텍스트 파일은 먼저 전송 완료
+    S->>C: DATA (Stream 3) - (추가 작은 데이터 요청 예시)
+    S->>C: DATA (Stream 1) - 이미지 청크 #4
+    Note over C,S: 두 스트림의 프레임이<br/>서로 교차(인터리브)되며 도착
 
+    Note over C,S: Stream 3 응답 완료<br/>Stream 1 응답도 계속 전송 중
+
+    S->>C: DATA (Stream 1) - 최종 이미지 청크
+    Note over C,S: 모든 스트림 응답이 종결
 ```
 
 ## 스트림 우선순위
