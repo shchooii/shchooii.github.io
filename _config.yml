@@ -22,7 +22,7 @@ timezone: Asia/Seoul
 
 title: Hoon # the main title
 
-tagline: "백엔드 뉴비에서 레벨업!"
+tagline: "DevOps to MLOps"
 
 description: >- # used by seo meta and the atom feed
   백엔드에 대한 작은 배움과 경험을 공유합니다.
