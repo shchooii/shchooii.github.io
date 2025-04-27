@@ -1,6 +1,6 @@
 ---
 title: Java Exception
-date: 2025-04-13 08:37:20 +09:00
+date: 2025-04-24 08:37:20 +09:00
 categories: ['java']
 tags: ['java', 'Exception', 'Throwable']
 mermaid: true
