@@ -21,7 +21,7 @@ Docker는 개발자가 애플리케이션과 의존성 요소들을 하나의 �
 현재 표준은 주로 가상 머신(VM)을 사용하여 애플리케이션을 실행하는 것입니다. VM은 게스트 운영체제 위에서 애플리케이션을 실행하며, 이는 다시 호스트 운영체제 위에서 가상 하드웨어를 사용하여 동작합니다.
 
 ```mermaid
-%%{init: {"theme":"base", "flowchart": {"htmlLabels": true}}}%%
+%%{init: {"flowchart": {"htmlLabels": true}}}%%
 graph LR
   subgraph "VM Architecture"
     direction BT
@@ -49,7 +49,7 @@ VM은 각 애플리케이션을 완전히 분리된 별도의 컴퓨터처럼 �
 
 
 ```mermaid
-%%{init: {"theme":"base", "flowchart": {"htmlLabels": true}}}%%
+%%{init: {"flowchart": {"htmlLabels": true}}}%%
 graph LR
   %% ───────────── Container Architecture (왼쪽) ─────────────
   subgraph "Container Architecture"
