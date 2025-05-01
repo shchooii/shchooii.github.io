@@ -6,7 +6,7 @@ tags: ['python', '@property', 'overriding', 'overloading']
 ---
 
 
-이 문서는 최근 학습한 내용을 바탕으로 Python 객체지향(OOP) 개념을 정리한 요약본입니다.
+Python 객체지향(OOP) 개념을 정리하였습니다.
 `@property`, `*args`, `**kwargs`, 메서드 오버로딩, 다중 디스패치, 상속 구조 등 자주 쓰이는 핵심 내용을 간단한 설명과 예제 중심으로 담았습니다.
 
 ## 1. `@property` vs Getter/Setter
