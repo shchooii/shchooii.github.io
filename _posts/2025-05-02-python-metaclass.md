@@ -1,6 +1,6 @@
 ---
 title: Python MetaClass
-date: 2025-05-01 08:37:20 +09:00
+date: 2025-05-02 08:37:20 +09:00
 categories: ['python']
 tags: ['python', 'meta-class', 'type']
 ---
