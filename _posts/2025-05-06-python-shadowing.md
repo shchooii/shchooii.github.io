@@ -1,7 +1,7 @@
 ---
 title: Python Shadowing
 date: 2025-05-06 11:16:20 +09:00
-categories: ['docker']
+categories: ['python']
 tags: ['python', 'class', 'method', 'shadowing']
 ---
 
