@@ -37,7 +37,7 @@ github:
   username: shchoi02 # change to your GitHub username
 
 instagram:
-  username: cshoon02 # change to your Twitter username
+  username: # change to your Twitter username
 
 social:
   # Change to your full name.
@@ -46,7 +46,7 @@ social:
   email: 0505zhsks@naver.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://github.com/cshooon # change to your GitHub homepage
+    - https://github.com/shchoi02 # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
