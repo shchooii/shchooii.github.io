@@ -5,7 +5,7 @@ categories: ['docker']
 tags: ['docker', 'kubernetes', 'manifest']
 ---
 
-`ICD-Coding` 프로젝트를 쿠버네티스 환경에서 실행하기 위한 **Deployment, Service, Job 매니페스트** 예시와 설정 방법을 정리하였습니다.
+`ICD-Coding` 프로젝트를 쿠버네티스 환경에서 실행하기 위한 **Deployment, Service, Job manifest** 예시와 설정 방법을 정리하였습니다.
 
 ---
 
@@ -209,7 +209,7 @@ spec:
 
 ## 맺음말
 
->위 매니페스트는 **ICD-Coding 프로젝트를 GPU 클러스터 환경에서 안정적으로 실행**하기 위해 설계되었습니다.
+> 위 manifest는 **ICD-Coding 프로젝트를 GPU 클러스터 환경에서 안정적으로 실행**하기 위해 설계되었습니다.
 > Deployment는 SSH 접근용, Service는 외부 노출, Job은 학습 실행을 담당합니다.
 > 실제 사용 시에는 계정 및 저장소 경로, 보안 설정(비밀번호·토큰 등)을 반드시 환경에 맞게 수정해야 합니다.
 
