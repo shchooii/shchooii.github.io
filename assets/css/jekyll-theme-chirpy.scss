@@ -8,3 +8,34 @@
 ';
 
 /* append your custom style below */
+/* 라이트/다크 전환 */
+.theme-switch .for-light { display: block !important; }
+.theme-switch .for-dark  { display: none  !important; }
+
+html[data-mode="dark"] .theme-switch .for-light { display: none  !important; }
+html[data-mode="dark"] .theme-switch .for-dark  { display: block !important; }
+
+/* 중앙 정렬 (Chirpy 기본 스타일 이겨내기) */
+.theme-switch {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin: 1rem 0 !important;
+  clear: both !important;  /* 좌/우 플로트 영향 차단 */
+}
+
+.theme-switch p {
+  margin: 0 !important;
+}
+
+.theme-switch img {
+  display: block !important;   /* inline 특성 제거 */
+  float: none !important;      /* 테마에서 강제된 float 무효화 */
+  margin: 0 auto !important;   /* 안전한 중앙 */
+  max-width: 80%;              /* 필요하면 100%로 변경 */
+  height: auto !important;
+}
+
+
+
