@@ -1,8 +1,8 @@
 ---
 title: ML Systems Start
 date: 2025-06-24 10:40:20 +09:00
-categories: ['MLOps']
-tags: ['MLOps', 'ML systems']
+categories: ['mlops']
+tags: ['mlops', 'ml-systems']
 ---
 
 이 책 (Designing Machine Learning Systems) 을 요약 정리한 내용입니다.
