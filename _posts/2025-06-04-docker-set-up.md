@@ -111,7 +111,7 @@ docker buildx build \
 
 ## 실행 & 검증 (GPU 서버)
 
-1. **GPU 노출 확인**
+1. **GPU 확인**
 
 ```bash
 nvidia-smi

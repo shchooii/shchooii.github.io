@@ -1,6 +1,6 @@
 ---
 title: Operating System Summary
-date: 2025-07-05 12:40:20 +09:00
+date: 2025-07-16 12:40:20 +09:00
 categories: ['os']
 tags: ['os', 'engineer-information-processing']
 ---
