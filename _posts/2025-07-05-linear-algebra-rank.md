@@ -1,8 +1,8 @@
 ---
 title: Linear Algebra Rank
 date: 2025-07-05 11:40:20 +09:00
-categories: ['linear-alegbra']
-tags: ['linear-alegbra', 'rank']
+categories: ['linear alegbra']
+tags: ['linear alegbra', 'rank']
 math: true
 ---
 

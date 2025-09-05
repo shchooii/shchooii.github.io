@@ -2,7 +2,7 @@
 title: Operating System Summary
 date: 2025-07-16 12:40:20 +09:00
 categories: ['os']
-tags: ['os', 'engineer-information-processing']
+tags: ['os', 'engineer information processing']
 ---
 
 # 운영체제 정리 (정보처리기사)
