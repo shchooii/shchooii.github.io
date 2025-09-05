@@ -3,8 +3,6 @@ title: Deep Learning Start
 date: 2025-07-24 13:40:20 +09:00
 categories: ['deep learning']
 tags: ['deep learning', 'training', 'loss function']
-
-
 ---
 
 > 출처: 사이토 고키, 『밑바닥부터 시작하는 딥러닝』 (2017)  
