@@ -1,6 +1,6 @@
 ---
 title: Linear Algebra Eigen
-date: 2025-08-23 16:45:20 +09:00
+date: 2025-08-03 16:45:20 +09:00
 categories: ['linear algebra']
 tags: ['linear algebra', 'eigen vector', 'eigen value']
 math: true
