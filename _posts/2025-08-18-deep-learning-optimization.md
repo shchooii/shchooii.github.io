@@ -134,6 +134,10 @@ math: true
 
 2. **Nesterov Accelerated Momentum (NAG)**
   - 업데이트 전 미리 "앞을 내다보고" 보정합니다.
+  - $$
+    v_t = \rho v_{t-1} - \eta \nabla L(W_t + \rho v_{t-1})
+    $$
+  - $$ W_{t+1} = W_t + v_t $$
 
 3. **AdaGrad**
   - 파라미터별 학습률을 조정합니다.
