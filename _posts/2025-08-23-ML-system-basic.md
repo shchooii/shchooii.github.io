@@ -2,7 +2,7 @@
 title: ML Systems Basic
 date: 2025-08-23 11:45:58 +09:00
 categories: ['mlops']
-tags: ['mlops', 'ml-systems', 'requirements']
+tags: ['mlops', 'ml systems', 'requirements']
 ---
 
 ## Intro

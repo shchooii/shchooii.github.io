@@ -20,54 +20,10 @@ Docker는 개발자가 애플리케이션과 의존성 요소들을 하나의 �
 
 현재 표준은 주로 가상 머신(VM)을 사용하여 애플리케이션을 실행하는 것입니다. VM은 게스트 운영체제 위에서 애플리케이션을 실행하며, 이는 다시 호스트 운영체제 위에서 가상 하드웨어를 사용하여 동작합니다.
 
-```mermaid
-%%{init: {"flowchart": {"htmlLabels": true}}}%%
-graph LR
-  subgraph "VM Architecture"
-    direction BT
-    VMInfra["Infrastructure"]:::infrastructure
-    VMHyper["Hypervisor"]:::hypervisor
-
-    VMInfra --- VMHyper
-
-    VMHyper --- VM1GOS["Guest OS"]:::os
-    VM1GOS --- VM1DE["Docker Engine"]:::engine
-    VM1DE  --- VM1A["App A<br/>Bins/Libs"]:::container
-    VM1DE  --- VM1B["App B<br/>Bins/Libs"]:::container
-
-    VMHyper --- VM2GOS["Guest OS"]:::os
-    VM2GOS --- VM2DE["Docker Engine"]:::engine
-    VM2DE  --- VM2C["App C<br/>Bins/Libs"]:::container
-
-    VMHyper --- VM3GOS["Guest OS"]:::os
-    VM3GOS --- VM3D["App D<br/>Bins/Libs"]:::container
-  end
-```
-
-VM은 각 애플리케이션을 완전히 분리된 별도의 컴퓨터처럼 따로따로 실행시킵니다. 한 프로그램이 망가져도 다른 프로그램에는 영향을 주지 않는 분리 효과를 얻을 수 있습니다. 하지만 이런 분리를 위해 가상의 하드웨어를 만들어야 해서 컴퓨터 자원이 많이 소모됩니다. 반면 컨테이너는 같은 운영체제 안에서 프로그램끼리 필요한 부분만 구분해서 나누어 쓰는 방식입니다. 서로 간섭 없이 독립적으로 실행되면서도, VM보다 훨씬 가볍게 동작할 수 있습니다.
-
-
-
-```mermaid
-%%{init: {"flowchart": {"htmlLabels": true}}}%%
-graph LR
-  %% ───────────── Container Architecture (왼쪽) ─────────────
-  subgraph "Container Architecture"
-    direction BT
-    CInfra["Infrastructure"]:::infrastructure
-    CHost["Host OS"]:::os
-    CDE["Docker Engine"]:::engine
-    CA1["App A<br/>Bins/Libs"]:::container
-    CA2["App B<br/>Bins/Libs"]:::container
-    CA3["App C<br/>Bins/Libs"]:::container
-
-    CInfra --- CHost
-    CHost  --- CDE
-    CDE    --- CA1
-    CDE    --- CA2
-    CDE    --- CA3
-  end
-```
+<div class="theme-switch" markdown="1">
+![ML System](/assets/images/figure_2_light.png){: .for-light }
+![ML System](/assets/images/figure_2_dark.png){: .for-dark }
+</div>
 
 ## 컨테이너를 사용하는 이유
 
