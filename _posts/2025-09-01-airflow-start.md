@@ -69,7 +69,7 @@ Airflow는 아래 구성요소로 동작합니다.
 
 ---
 
-## 운영·보안(Operations & Security)
+## Operations & Security
 
 * **RBAC**: 역할 기반 접근 제어로 UI/리소스 권한을 분리합니다.
 * **Secret Backend**: 자격증명·커넥션을 Vault/AWS Secrets Manager/GCP Secret Manager 등으로 위임합니다.
@@ -79,7 +79,7 @@ Airflow는 아래 구성요소로 동작합니다.
 
 ---
 
-## 베스트 프랙티스(Practical Tips)
+## Practical Tips
 
 1. **작게 쪼개고 명확히 연결**: 태스크는 단일 책임 원칙, 의존성은 최소/명시적으로 설계합니다.
 2. **데이터 이동은 외부 스토리지**: XCom은 메타데이터만, 대용량은 S3/GCS/HDFS 등 사용합니다.
@@ -90,7 +90,7 @@ Airflow는 아래 구성요소로 동작합니다.
 
 ---
 
-## 최소 예제(DAG · TaskFlow API)
+## 예제 (DAG · TaskFlow API)
 
 ```python
 from datetime import datetime, timedelta
@@ -140,7 +140,7 @@ with DAG(
 
 ---
 
-## 일반적 장애 원인 & 해결
+## 버그 원인 & 해결
 
 * **Queued에서 멈춤**: Pool/Concurrency 제한 과부하, Executor/워커 스케일 확인.
 * **Timezone 착오**: Airflow는 기본 UTC입니다. 스케줄과 타임스탬프 기준을 통일합니다.
