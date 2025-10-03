@@ -9,7 +9,7 @@ tags: ['airflow', 'dag', 'smtp']
 특히 Airflow 3.x 버전 기준으로 `api-server`, `scheduler`, `dag-processor` 3가지 프로세스를 실행해야 하는 이유와, DAG 실패 시 이메일 알림이 오도록 설정하는 과정을 단계별로 설명합니다.
 
 
-## 🔹 Airflow 주요 프로세스
+## Airflow 주요 프로세스
 
 ### 1. API Server (`airflow api-server`)
 - 역할: Airflow UI(Web UI) 및 REST API를 제공
@@ -31,7 +31,7 @@ tags: ['airflow', 'dag', 'smtp']
 
 ---
 
-## 🔹 기본 실행 순서
+## 기본 실행 순서
 
 ```bash
 # 터미널 1 - API Server 실행
@@ -52,7 +52,7 @@ airflow dag-processor
 
 ---
 
-## 🔹 DAG 예시 (실패 → 이메일 알림)
+## DAG 예시 (실패 → 이메일 알림)
 
 `$AIRFLOW_HOME/dags/hello_email_dag.py`
 
@@ -96,7 +96,7 @@ with DAG(
 
 ---
 
-## 🔹 이메일(SMTP) 설정
+## 이메일(SMTP) 설정
 
 Airflow는 자체 메일 서버가 없으므로 외부 SMTP 서버(Gmail, Naver 등)를 설정해야 합니다.  
 이번 예시는 **Naver SMTP + 앱 비밀번호** 방식입니다.
@@ -121,14 +121,14 @@ smtp_mail_from = your_id@naver.com
 
 ---
 
-## 🔹 테스트 및 확인
+## 테스트 및 확인
 1. Airflow 프로세스 3개 실행 (`api-server`, `scheduler`, `dag-processor`)
 2. UI에서 `hello_email_dag` ON → Trigger DAG
 3. `fail_task` 실패 시 → `default_args["email"]`로 알림 메일 수신 확인
 
 ---
 
-## 📌 맺음말
+## 맺음말
 > Airflow 3.x에서는 DAG 실행을 위해 세 가지 프로세스(api-server, scheduler, dag-processor)가 모두 필요합니다.
 > 알림 메일을 보내기 위해서는 SMTP 설정이 반드시 완료되어야 하며, 네이버/구글 계정의 경우 **앱 비밀번호** 발급이 필수입니다.
 
