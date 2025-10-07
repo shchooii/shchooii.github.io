@@ -2,7 +2,7 @@
 title: Deep Learning Backpropagation
 date: 2025-09-13 16:55:58 +09:00
 categories: ['deep learning']
-tags: ['deep learning', 'back propagation', '']
+tags: ['deep learning', 'back propagation']
 math: true
 ---
 
