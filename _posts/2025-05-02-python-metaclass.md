@@ -12,10 +12,10 @@ tags: ['python', 'meta-class', 'type']
 
 | 구분 | 정의 |
 |------|------|
-| **클래스(Class)** | 객체(인스턴스)를 찍어내는 설계도 |
-| **메타클래스(Metaclass)** | "클래스를 찍어내는 설계도" (클래스 생성 제어) |
+| 클래스(Class) | 객체(인스턴스)를 찍어내는 설계도 |
+| 메타클래스(Metaclass) | "클래스를 찍어내는 설계도" (클래스 생성 제어) |
 
-* **기본 메타클래스**: `type` `→` 모든 클래스는 `type`의 인스턴스.
+* 기본 메타클래스: `type` `→` 모든 클래스는 `type`의 인스턴스.
 * 커스텀 메타클래스: `class MyMeta(type): ...` 형태로 `type`을 상속해 정의.
 
 ```mermaid
@@ -35,7 +35,7 @@ graph LR
 <class 'type'>
 ```
 
-* `type(type) == type` → 파이썬 객체 시스템을 하나의 축으로 통일하는 **self‑bootstrap** 구조.
+* `type(type) == type` → 파이썬 객체 시스템을 하나의 축으로 통일하는 self‑bootstrap 구조.
 
 ---
 
@@ -54,9 +54,9 @@ graph LR
 
 | 순서 | 호출 주체 | 메서드 | 설명 |
 |------|-----------|--------|------|
-| ③ | 메타클래스 | `__call__(cls, *args, **kw)` | 인스턴스 생성 총괄 |
-| ④ | 클래스 | `__new__(cls, *args, **kw)` | 메모리 할당 |
-| ⑤ | 클래스 | `__init__(self, *args, **kw)` | 인스턴스 초기화 |
+| ③ | 메타클래스 | `__call__(cls, *args, kw)` | 인스턴스 생성 총괄 |
+| ④ | 클래스 | `__new__(cls, *args, kw)` | 메모리 할당 |
+| ⑤ | 클래스 | `__init__(self, *args, kw)` | 인스턴스 초기화 |
 
 ---
 
@@ -80,15 +80,15 @@ class CustomListMeta(type):
         ns['cus_mul'] = lambda self,d: ...
         return super().__new__(mcls, name, bases, ns)
 
-    def __call__(cls, *a, **kw):
+    def __call__(cls, *a, kw):
         print('__call__ intercept')
-        return super().__call__(*a, **kw)
+        return super().__call__(*a, kw)
 
 CustomList2 = CustomListMeta('CustomList2', (list,), {})
 ```
 
-* `CustomList1` : **기본 메타클래스(`type`)**만 사용.
-* `CustomList2` : **커스텀 메타클래스**로 클래스 정의 전/후, 인스턴스 생성 시점 모두 개입.
+* `CustomList1` : 기본 메타클래스(`type`)만 사용.
+* `CustomList2` : 커스텀 메타클래스로 클래스 정의 전/후, 인스턴스 생성 시점 모두 개입.
 
 ---
 
@@ -105,6 +105,6 @@ CustomList2 = CustomListMeta('CustomList2', (list,), {})
 ## 맺음말
 
 > 메타클래스는 "필요할 때만 쓰는 메타 프로그래밍 도구"입니다.  
-> 대부분의 코드는 상속과 데코레이터만으로 충분하지만, **클래스 정의를 자동화하거나 검증이 필요한 프레임워크**를 만들 때 사용됩니다.
+> 대부분의 코드는 상속과 데코레이터만으로 충분하지만, 클래스 정의를 자동화하거나 검증이 필요한 프레임워크를 만들 때 사용됩니다.
 
 > 도움이 되었기를 바랍니다. ✨

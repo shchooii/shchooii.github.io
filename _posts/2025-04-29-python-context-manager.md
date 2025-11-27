@@ -14,7 +14,7 @@ Python에서는 리소스를 열고 사용하는 과정을 안전하게 처리�
 그리고 with 문을 구성하는 다양한 방법을 정리합니다.
 
 ## 1. 데코레이터 (Decorator)
-> 함수를 *포장*해 실행 전후(또는 실행 방식)를 바꿉니다.
+> 함수를 포장해 실행 전후(또는 실행 방식)를 바꿉니다.
 
 ```python
 def simple_decorator(func):
@@ -59,14 +59,14 @@ next(g)  # 3
 
 |구분|`return`|`yield`|
 |---|---|---|
-|역할|값 반환 후 **종료**|값 반환 후 **중단**|
+|역할|값 반환 후 종료|값 반환 후 중단|
 |상태 유지|X|O (로컬 변수, 실행 위치 보존)|
 |재실행|불가|`next()` 호출 때 이어서 실행|
 
 ---
 
 ## 3. `@contextmanager` (데코레이터 + 제너레이터)
-> “`yield` 앞을 **`__enter__`**, `yield` 뒤를 **`__exit__`** 처럼 만들어 with 문을 손쉽게 구현합니다.”
+> “`yield` 앞을 `__enter__`, `yield` 뒤를 `__exit__` 처럼 만들어 with 문을 손쉽게 구현합니다.”
 
 ```python
 from contextlib import contextmanager
@@ -91,7 +91,7 @@ with execute_timer("작업 시간"):
 ```
 
 ### Why yield?
-`with` 흐름은 “**enter → (블록) → exit**” 3단계를 필요로 합니다.  
+`with` 흐름은 “enter → (블록) → exit” 3단계를 필요로 합니다.  
 `yield`는 *중단점*을 제공해 이 3단계를 하나의 함수 안에서 나눌 수 있게 해줍니다.
 
 ---
@@ -117,7 +117,7 @@ class ExecuteTimer:
         return True  # 예외 무시
 ```
 
-동일한 **with** 사용:
+동일한 with 사용:
 
 ```python
 with ExecuteTimer("작업 시간"):
@@ -147,10 +147,10 @@ with ExecuteTimer("작업 시간"):
 ---
 
 ## 맺음말
-`yield`는 **“값을 내보내고 함수 실행을 잠시 중단”** 하는 Python의 제어 흐름 도구입니다.  
-`@contextmanager`로 **with 문 리소스 관리**를 간단하게 해결할 수 있고, 데이터 스트리밍·비동기 처리까지 확장됩니다.
+`yield`는 “값을 내보내고 함수 실행을 잠시 중단” 하는 Python의 제어 흐름 도구입니다.  
+`@contextmanager`로 with 문 리소스 관리를 간단하게 해결할 수 있고, 데이터 스트리밍·비동기 처리까지 확장됩니다.
 
-> **return은 종료, yield는 일시정지.**  
+> return은 종료, yield는 일시정지.  
 > 필요에 따라 데코레이터·제너레이터·컨텍스트 매니저를 적재적소에 배치하면 가독성과 안정성을 모두 챙길 수 있습니다.
 
 > 본 글이 도움이 되었기를 바랍니다.
