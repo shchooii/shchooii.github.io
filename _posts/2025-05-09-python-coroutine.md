@@ -18,8 +18,8 @@ Python에서는 동시성(concurrency)과 병렬성(parallelism)이 필수입니
 
 | 구분                | 역할                       |
 | ----------------- | ------------------------ |
-| **`yield` 우측 값**  | 호출자에게 *내보내는(return)* 값   |
-| **`yield` 좌측 변수** | 호출자가 `.send()`로 *보내주는* 값 |
+| `yield` 우측 값  | 호출자에게 *내보내는(return)* 값   |
+| `yield` 좌측 변수 | 호출자가 `.send()`로 *보내주는* 값 |
 
 ```python
 # 제너레이터
@@ -41,15 +41,15 @@ next(c)      # 시작(= send(None))
 c.send(99)   # x ← 99, 이후 종료
 ```
 
-❗ 코루틴은 **반드시** `next(c)` *또는* `c.send(None)`으로 ‘ 호출해야 `.send()`로 값을 줄 수 있습니다.
+❗ 코루틴은 반드시 `next(c)` *또는* `c.send(None)`으로 ‘ 호출해야 `.send()`로 값을 줄 수 있습니다.
 
 ## Python Concurrency
 
 | 용어              | 설명                                           | 적합한 상황           |
 | --------------- | -------------------------------------------- | ---------------- |
-| **Concurrency** | 한 CPU에서 작업을 빠르게 번갈아 실행해 ‘동시에’ 보이게 함          | I/O 대기 많은 프로그램   |
-| **Parallelism** | 여러 CPU/코어가 **진짜로 동시에** 실행                    | CPU 계산이 무거운 프로그램 |
-| **GIL**         | CPython 인터프리터의 전역 락. 스레드가 동시에 바이트코드를 실행하지 못함 | 스레드 성능 제한 요인     |
+| Concurrency | 한 CPU에서 작업을 빠르게 번갈아 실행해 ‘동시에’ 보이게 함          | I/O 대기 많은 프로그램   |
+| Parallelism | 여러 CPU/코어가 진짜로 동시에 실행                    | CPU 계산이 무거운 프로그램 |
+| GIL         | CPython 인터프리터의 전역 락. 스레드가 동시에 바이트코드를 실행하지 못함 | 스레드 성능 제한 요인     |
 
 ## `concurrent.futures` API
 
@@ -68,7 +68,7 @@ with <ExecutorClass>(max_workers=...) as executor:
 
 | 항목         | ThreadPoolExecutor | ProcessPoolExecutor |
 | ---------- | ------------------ | ------------------- |
-| **GIL 영향** | 받음 → **가짜 병렬**     | 안 받음 → **진짜 병렬**    |
+| GIL 영향 | 받음 → 가짜 병렬     | 안 받음 → 진짜 병렬    |
 | 적합 작업      | 파일, 네트워크 등 I/O     | 수치 계산, 이미지 처리 등 CPU |
 | 오버헤드       | 낮음 (메모리 공유)        | 높음 (프로세스 간 직렬화)     |
 
@@ -78,7 +78,7 @@ with <ExecutorClass>(max_workers=...) as executor:
 | ------------------------ | ------------------- | --------------- |
 | `map(fn, iterable)`      | 입력 순서 == 출력 순서      | 순서 중요, 간단 반복    |
 | `wait(futures, timeout)` | 전체 완료 or 타임아웃까지 블록  | 종료 시점 제어        |
-| `as_completed(futures)`  | **끝나는 순서**대로 반복자 제공 | 실시간 출력, UI 업데이트 |
+| `as_completed(futures)`  | 끝나는 순서대로 반복자 제공 | 실시간 출력, UI 업데이트 |
 
 ## 코드
 
@@ -128,10 +128,10 @@ print(f'소요 시간: {time.time() - start:.2f}s')
 
 | 작업            | What                                             |
 | ----------------- | -------------------------------------------------- |
-| **대용량 파일 읽기/쓰기**  | `ThreadPoolExecutor`                               |
-| **웹 크롤링/HTTP 호출** | `ThreadPoolExecutor` + `asyncio` 가능                |
-| **행렬 곱, 이미지 필터**  | `ProcessPoolExecutor` 또는 `NumPy`/`multiprocessing` |
-| **DB 쿼리 수백 개**    | `ThreadPoolExecutor` (I/O)                         |
+| 대용량 파일 읽기/쓰기  | `ThreadPoolExecutor`                               |
+| 웹 크롤링/HTTP 호출 | `ThreadPoolExecutor` + `asyncio` 가능                |
+| 행렬 곱, 이미지 필터  | `ProcessPoolExecutor` 또는 `NumPy`/`multiprocessing` |
+| DB 쿼리 수백 개    | `ThreadPoolExecutor` (I/O)                         |
 
 ---
 

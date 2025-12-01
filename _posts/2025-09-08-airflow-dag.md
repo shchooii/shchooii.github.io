@@ -22,11 +22,11 @@ tags: ['airflow', 'dag', 'smtp']
 - 실질적으로 DAG 실행 여부를 컨트롤하는 핵심 프로세스
 
 ### 3. DAG Processor (`airflow dag-processor`)
-- 역할: Airflow 3.x에서 **추가된 별도 프로세스**
+- 역할: Airflow 3.x에서 추가된 별도 프로세스
 - DAG 파일을 파싱하고 DagBag에 반영하는 역할
 - DAG을 UI에서 인식시키려면 반드시 실행 필요
 
-👉 따라서 **Airflow 3.x에서는 최소 3개 프로세스를 동시에 실행해야 함**  
+👉 따라서 Airflow 3.x에서는 최소 3개 프로세스를 동시에 실행해야 함  
 (`api-server`, `scheduler`, `dag-processor`)
 
 ---
@@ -99,7 +99,7 @@ with DAG(
 ## 이메일(SMTP) 설정
 
 Airflow는 자체 메일 서버가 없으므로 외부 SMTP 서버(Gmail, Naver 등)를 설정해야 합니다.  
-이번 예시는 **Naver SMTP + 앱 비밀번호** 방식입니다.
+이번 예시는 Naver SMTP + 앱 비밀번호 방식입니다.
 
 ### airflow.cfg 설정 예시
 
@@ -117,7 +117,7 @@ smtp_mail_from = your_id@naver.com
 ```
 
 - `smtp_user`, `smtp_mail_from`는 반드시 로그인 계정과 동일해야 함
-- `smtp_password`는 네이버에서 발급받은 **앱 비밀번호(12자리)**
+- `smtp_password`는 네이버에서 발급받은 앱 비밀번호(12자리)
 
 ---
 
@@ -130,9 +130,9 @@ smtp_mail_from = your_id@naver.com
 
 ## 맺음말
 > Airflow 3.x에서는 DAG 실행을 위해 세 가지 프로세스(api-server, scheduler, dag-processor)가 모두 필요합니다.
-> 알림 메일을 보내기 위해서는 SMTP 설정이 반드시 완료되어야 하며, 네이버/구글 계정의 경우 **앱 비밀번호** 발급이 필수입니다.
+> 알림 메일을 보내기 위해서는 SMTP 설정이 반드시 완료되어야 하며, 네이버/구글 계정의 경우 앱 비밀번호 발급이 필수입니다.
 
-> 이번 과정을 통해 **Airflow DAG 실행 → 실패 알림 메일 발송**까지 기본적인 워크플로우를 구축할 수 있습니다.
+> 이번 과정을 통해 Airflow DAG 실행 → 실패 알림 메일 발송까지 기본적인 워크플로우를 구축할 수 있습니다.
 > 실제 서비스에서는 Slack, Teams 같은 협업 툴 알림 연동도 가능합니다. 🚀
 
 ---
