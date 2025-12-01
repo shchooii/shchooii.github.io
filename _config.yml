@@ -22,10 +22,10 @@ timezone: Asia/Seoul
 
 title: Hoon # the main title
 
-tagline: "DevOps to MLOps"
+tagline: "Engineering Log"
 
 description: >- # used by seo meta and the atom feed
-  MLOps에 대한 작은 배움과 경험을 공유합니다.
+  데이터와 모델, 그리고 시스템을 잇는 엔지니어링 기록.
 
 # Fill in the protocol & hostname for your site.
 url: "https://shchooii.github.io"
