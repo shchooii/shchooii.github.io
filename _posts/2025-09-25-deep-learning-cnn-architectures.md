@@ -15,7 +15,7 @@ math: true
 ### LeNet-5 (1998)
 * 특징: 초창기 CNN 모델로, 우편 번호와 같은 손글씨 숫자 인식을 위해 개발되었습니다.
 * 구조: [Conv - Pool - Conv - Pool - FC - FC] 형태의 단순한 구조를 가집니다.
-* 필터: $5 \times 5$ 크기의 컨볼루션 필터를 사용했습니다.
+* 필터: $$5 \times 5$$ 크기의 컨볼루션 필터를 사용했습니다.
 
 
 ### AlexNet (2012) - 1차 혁명
@@ -41,7 +41,7 @@ math: true
 * 단점: FC(Fully Connected) 레이어 비중이 높아 파라미터 수가 매우 많고(약 1억 3,800만 개), 메모리 사용량이 큽니다.
 
 
-### 2.5. GoogLeNet (Inception V1) (2014) - 효율성(Efficiency)
+### GoogLeNet (Inception V1) (2014) - 효율성(Efficiency)
 * 특징: ILSVRC 2014 우승 모델로, 22개의 레이어를 가지면서도 파라미터 수는 AlexNet의 1/12 수준(500만 개)으로 매우 효율적입니다.
 * Inception 모듈: $$1 \times 1$$, $$3 \times 3$$, $$5 \times 5$$ 컨볼루션과 $$3 \times 3$$ 풀링을 병렬로 수행하고 결과를 합치는(Concatenate) 구조입니다.
 * Bottleneck 구조 ($$1 \times 1$$ Conv): 연산량 감소를 위해 $$3 \times 3$$이나 $$5 \times 5$$ 컨볼루션 전에 $$1 \times 1$$ 컨볼루션을 배치하여 채널 수(Depth)를 줄였습니다.
@@ -58,7 +58,7 @@ math: true
 * Inception-v4: ResNet의 잔차 연결(Skip Connection)과 Inception 모듈을 결합한 형태입니다.
 * SENet (2017): Squeeze-and-Excitation 모듈을 도입했습니다. 이는 특징 맵(Feature map)의 채널별 중요도를 학습하여 가중치를 재조정(Recalibration)하는 방식입니다.
 
-## 3. 비교 및 분석 (Comparison)
+## 비교 및 분석 (Comparison)
 * 정확도 vs 연산량:
   * VGGNet은 정확도는 높지만 파라미터가 가장 많고 연산량이 큽니다(비효율적).
   * GoogLeNet은 매우 효율적이며 적은 파라미터로 높은 성능을 냅니다.
