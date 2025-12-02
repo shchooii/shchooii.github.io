@@ -1,6 +1,6 @@
 ---
 title: Deep Learning CNN Architectures
-date: 2025-09-20 16:59:58 +09:00
+date: 2025-09-25 10:52:58 +09:00
 categories: ['deep learning']
 tags: ['deep learning', 'CNNs', 'ImageNet']
 math: true
