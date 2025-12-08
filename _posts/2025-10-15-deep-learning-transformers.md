@@ -1,6 +1,6 @@
 ---
 title: Deep Learning Transformer
-date: 2025-10-08 12:52:58 +09:00
+date: 2025-10-15 10:52:58 +09:00
 categories: ['deep learning']
 tags: ['deep learning', 'transformer']
 mermaid: true
