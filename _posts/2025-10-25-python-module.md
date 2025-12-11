@@ -1,6 +1,6 @@
 ---
 title: Python Module
-date: 2025-10-23 12:52:58 +09:00
+date: 2025-10-25 12:59:58 +09:00
 categories: ['python']
 tags: ['python', 'module', 'math', 'random', 'platform', 'sys']
 ---
