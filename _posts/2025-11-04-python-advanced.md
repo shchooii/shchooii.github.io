@@ -1,6 +1,6 @@
 ---
 title: Python Generators & Files
-date: 2025-10-31 18:13:48 +09:00
+date: 2025-11-04 15:13:48 +09:00
 categories: ['python']
 tags: ['python', 'oop', 'properties', 'methods', 'exception']
 ---
