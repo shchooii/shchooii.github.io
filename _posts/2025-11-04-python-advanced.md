@@ -2,7 +2,7 @@
 title: Python Generators & Files
 date: 2025-11-04 15:13:48 +09:00
 categories: ['python']
-tags: ['python', 'oop', 'properties', 'methods', 'exception']
+tags: ['python', 'generators', 'lambda', 'closures', 'file processing']
 ---
 
 Python Essentials 2 (PE2) 과정의 핵심 모듈인 제너레이터와 이터레이터, 클로저, 그리고 파일 입출력(I/O) 시스템에 대해 다룹니다. Python의 강력한 기능인 `yield` 문법과 함수형 프로그래밍 요소인 람다와 클로저를 이해하고, 텍스트 및 바이너리 파일을 효율적으로 처리하는 방법을 코드를 통해 상세히 설명하겠습니다.
