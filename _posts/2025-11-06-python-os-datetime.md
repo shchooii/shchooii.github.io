@@ -5,7 +5,7 @@ categories: ['python']
 tags: ['python', 'os', 'datetime', 'time', 'calendar']
 ---
 
-Python은 강력한 표준 라이브러리를 통해 운영체제(OS)의 기능을 제어하거나, 날짜와 시간을 정밀하게 다루는 기능을 제공합니다. 본 문서는 Python Essentials 2 코스에서 다루는 Module 4의 내용을 바탕으로, 파일 시스템을 제어하는 `os` 모듈과 시간 및 날짜 데이터를 처리하는 `datetime`, `time`, `calendar` 모듈의 핵심 기능과 사용법을 상세하게 정리하였습니다.
+Python은 표준 라이브러리를 통해 운영체제(OS)의 기능을 제어하거나, 날짜와 시간을 정밀하게 다루는 기능을 제공합니다. 본 문서는 Python Essentials 2 코스에서 다루는 Module 4의 내용을 바탕으로, 파일 시스템을 제어하는 `os` 모듈과 시간 및 날짜 데이터를 처리하는 `datetime`, `time`, `calendar` 모듈의 핵심 기능과 사용법을 상세하게 정리하였습니다.
 
 ## os 모듈: 운영체제와 상호작용
 
