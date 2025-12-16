@@ -3,6 +3,7 @@ title: Python String & Exception
 date: 2025-10-29 13:59:58 +09:00
 categories: ['python']
 tags: ['python', 'string', 'exception']
+mermaid: true
 ---
 
 
@@ -162,6 +163,43 @@ Python의 예외는 클래스 형태로 정의되어 있으며 계층 구조(트
 * Exception: 일반적인 예외들의 부모 클래스입니다.
 * 구체적인 예외(`ZeroDivisionError` 등)는 추상적인 예외(`ArithmeticError`)의 하위 클래스입니다.
 * 중요: `except` 블록을 작성할 때, 구체적인 예외를 먼저 작성하고 일반적인 예외를 나중에 작성해야 합니다.
+
+```mermaid
+flowchart LR
+    classDef root stroke-width:4px
+    classDef system stroke-dasharray: 5, 5
+    classDef highlight stroke-width:2px
+    
+    BE[BaseException]:::root
+    
+    SE[SystemExit]:::system
+    KI[KeyboardInterrupt]:::system
+    EX[Exception]:::highlight
+    
+    VE[ValueError]
+    ZDE[ZeroDivisionError]
+   
+    LE[LookupError]
+    AE[ArithmeticError]
+    
+    IE[IndexError]
+    KE[KeyError]
+    ZDE[ZeroDivisionError]
+
+    BE --> SE
+    BE --> KI
+    BE --> EX
+
+    EX --> VE
+    EX --> LE
+    EX --> AE
+
+    LE --> IE
+    LE --> KE
+
+    AE --> ZDE
+```
+
 
 ### 유용한 내장 예외 (Built-in Exceptions)
 
