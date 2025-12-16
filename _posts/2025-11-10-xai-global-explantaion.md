@@ -2,7 +2,7 @@
 title: XAI Global Explanation Methods
 date: 2025-11-10 16:52:58 +09:00
 categories: ['xai']
-tags: ['xai', 'lime', 'shapely', 'integrated gradients']
+tags: ['xai', 'model-agnostic', 'pdp', 'ale']
 math: true
 ---
 
