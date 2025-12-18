@@ -26,8 +26,7 @@ GAN의 기본 목적 함수는 다음과 같이 정의됩니다.
 
 $$
 \min_G \max_D
-\mathbb{E}_{x \sim p_{\text{data}}}[\log D(x)]
-\+ \mathbb{E}_{z \sim p(z)}[\log(1 - D(G(z)))]
+\mathbb{E}_{x \sim p_{\text{data}}}[\log D(x)] + \mathbb{E}_{z \sim p(z)}[\log(1 - D(G(z)))]
 $$
 
 GAN은 매우 선명한 이미지를 생성할 수 있다는 장점이 있으나, 일부 모드만 생성하는 mode collapse 문제가 발생할 수 있습니다.
@@ -39,9 +38,7 @@ Variational Autoencoder는 확률적 인코더 $$q_\phi(z|x)$$와 디코더 $$p_
 $$
 \mathcal{L}_{\text{ELBO}}
 =
-\mathbb{E}_{q_\phi(z|x)}[\log p_\theta(x|z)]
-\-
-\mathrm{KL}(q_\phi(z|x)\|p(z))
+\mathbb{E}_{q_\phi(z|x)}[\log p_\theta(x|z)] - \mathrm{KL}(q_\phi(z|x)\|p(z))
 $$
 
 VAE는 사용이 비교적 간단하고 안정적이지만, 재구성 이미지가 흐릿해지는 경향이 있습니다.
@@ -83,10 +80,7 @@ Integrated Gradients와 같은 gradient 기반 설명 방법은 baseline 선택�
 $$
 B_{c_t}(x) = \arg\min_{\tilde{x} \in \mathcal{R}^N}
 \left(
-\|x - \tilde{x}\|
-\- \log R(\tilde{x})
-\- \log S_{c_t}(\tilde{x})
-  \right)
+\|x - \tilde{x}\| - \log R(\tilde{x}) - \log S_{c_t}(\tilde{x})\right)
 $$
 
 여기서 $$R(\tilde{x})$$는 현실적인 이미지일 확률을, $$S_{c_t}(\tilde{x})$$는 타겟 클래스 점수를 의미합니다.
@@ -100,9 +94,7 @@ StarGAN 생성기의 손실 함수는 다음 항들의 결합으로 구성됩니
 $$
 \mathcal{L}_G
 =
-\mathcal{L}_{adv}
-\+ \lambda_{cls}\mathcal{L}_{cls}
-\+ \lambda_{rec}\mathcal{L}_{rec}
+\mathcal{L}_{adv} + \lambda_{cls}\mathcal{L}_{cls} + \lambda_{rec}\mathcal{L}_{rec}
 $$
 
 GANMEX에서는 판별기 대신, 설명 대상 분류기 $$S(x)$$를 사용하여 다음과 같은 손실을 정의합니다.
@@ -110,9 +102,7 @@ GANMEX에서는 판별기 대신, 설명 대상 분류기 $$S(x)$$를 사용하�
 $$
 \mathcal{L}_G^{GANMEX}
 =
-\mathbb{E}_x[\log(1 - D(G(x,c)))]
-\- \lambda_{cls} \log S_{c_t}(G(x,c))
-\+ \lambda_{rec}\|x - G(x,c)\|
+\mathbb{E}_x[\log(1 - D(G(x,c)))] - \lambda_{cls} \log S_{c_t}(G(x,c)) + \lambda_{rec}\|x - G(x,c)\|
 $$
 
 이를 통해 입력과 유사하면서도 다른 클래스에 속하는 반사실적 baseline을 생성합니다. 이 baseline을 사용한 IG 결과는 노이즈가 적고, 실제 변별적 특징만을 강조합니다.
