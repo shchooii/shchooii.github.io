@@ -33,7 +33,8 @@ GAN은 매우 선명한 이미지를 생성할 수 있다는 장점이 있으나
 
 ### VAE
 
-Variational Autoencoder는 확률적 인코더 $$q_\phi(z|x)$$와 디코더 $$p_\theta(x|z)$$를 학습하여 잠재 공간을 명시적으로 모델링합니다. 학습 목표는 Evidence Lower Bound를 최대화하는 것입니다.
+Variational Autoencoder는 확률적 인코더 $$q_\phi(z|x)$$ 와 디코더 $$p_\theta(x|z)$$ 를 학습하여 잠재 공간을 명시적으로 모델링합니다. 
+학습 목표는 Evidence Lower Bound를 최대화하는 것입니다.
 
 $$
 \mathcal{L}_{\text{ELBO}}
