@@ -1,6 +1,6 @@
 ---
 title: XAI Language Models
-date: 2025-11-17 18:13:12 +09:00
+date: 2025-11-21 19:13:12 +09:00
 categories: ['xai']
 tags: ['xai', 'llm']
 math: true
