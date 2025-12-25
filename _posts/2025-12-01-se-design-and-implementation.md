@@ -1,5 +1,5 @@
 ---
-title: Software Requirements Engineering
+title: Software Engineering Design & Implementation
 date: 2025-12-01 17:13:12 +09:00
 categories: ['se']
 tags: ['se', 'design', 'implementation']
