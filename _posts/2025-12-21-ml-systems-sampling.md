@@ -2,7 +2,7 @@
 title: ML Systems Sampling
 date: 2025-12-21 19:22:12 +09:00
 categories: ['mlops']
-tags: ['mlops', 'sampling', 'fault localization']
+tags: ['mlops', 'sampling', 'weighted', 'stratified', 'reservoir']
 math: true
 ---
 
