@@ -1,6 +1,6 @@
 ---
 title: ML Systems Labeling
-date: 2025-12-21 19:22:12 +09:00
+date: 2025-12-29 20:22:12 +09:00
 categories: ['mlops']
 tags: ['mlops', 'labeling']
 math: true
