@@ -100,7 +100,7 @@ $$
 전이학습은 사전학습된 모델을 새로운 과제에 활용하는 방법입니다. 파인튜닝은 다음과 같이 표현할 수 있습니다.
 
 $$
-\theta^\* = \arg\min_\theta \sum_{(x,y)} \ell(f_\theta(x), y)
+\theta^* = \arg\min_\theta \sum_{(x,y)} \ell(f_\theta(x), y)
 $$
 
 ## Active Learning
