@@ -6,9 +6,10 @@ tags: ['mlops', 'scaling', 'discretization']
 math: true
 ---
 
-머신러닝 시스템에서 특징(feature)은 모델의 성능과 안정성을 좌우하는 핵심 요소입니다. 2014년에 발표된 Facebook의 논문 “Practical Lessons from Predicting Clicks on Ads at Facebook”에서는 올바른 특징을 갖추는 것이 모델 개발에서 가장 중요하다고 강조하였습니다. 이후 산업 현장에서 반복적으로 확인된 사실은, 기본적으로 작동하는 모델이 확보된 이후에는 하이퍼파라미터 튜닝이나 알고리즘적 기교보다도 특징을 개선하는 것이 성능 향상에 더 큰 영향을 준다는 점입니다.
+머신러닝 시스템에서 특징(feature)은 모델의 성능과 안정성을 좌우하는 핵심 요소입니다. 2014년에 발표된 Facebook의 논문 “Practical Lessons from Predicting Clicks on Ads at Facebook”에서는 올바른 특징을 갖추는 것이 모델 개발에서 가장 중요하다고 강조하였습니다. 
 
-아무리 최신 모델 아키텍처를 사용하더라도 입력 특징이 부적절하면 모델 성능은 크게 제한됩니다. 이 장에서는 특징 공학의 핵심 개념과 대표적인 연산들을 정리하고, 실제 운영 환경에서 반드시 고려해야 할 문제들을 다룹니다.
+아무리 최신 모델 아키텍처를 사용하더라도 입력 특징이 부적절하면 모델 성능은 크게 제한됩니다. 
+이 장에서는 특징 공학의 핵심 개념과 대표적인 연산들을 정리하고, 실제 운영 환경에서 반드시 고려해야 할 문제들을 다룹니다.
 
 
 ## Learned Features Versus Engineered Features
