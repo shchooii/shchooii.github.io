@@ -3,6 +3,7 @@ title: ML Systems Model Development & Training
 date: 2026-01-13 12:00:00 +09:00
 categories: ['mlops']
 tags: ['mlops', 'model development', 'offline evaluation', 'ensemble']
+math: true
 ---
 
 모델 개발은 한 번에 끝나는 일이 아니라 반복적인(iterative) 과정입니다. 매 반복(iteration)마다 이전 실험 대비 성능이 개선되었는지 확인하고, 그 개선이 실제 프로덕션에 적합한 개선인지(비용/지연/해석가능성 등)를 함께 평가해야 합니다.
@@ -117,7 +118,7 @@ George Box의 말처럼 “모든 모델은 틀리지만, 어떤 모델은 유�
 - Prediction assumption: X로부터 Y를 예측할 수 있다고 가정
 - IID: 샘플이 독립 동일 분포에서 나왔다고 가정
 - Smoothness: 비슷한 입력은 비슷한 출력을 낸다고 가정
-- Tractability: 생성 모델에서 P(Z|X) 계산이 가능하다고 가정
+- Tractability: 생성 모델에서 $$P(Z|X)$$ 계산이 가능하다고 가정
 - Boundaries: 선형 분류기는 결정 경계가 선형이라고 가정
 - Conditional independence: Naive Bayes는 클래스 조건부로 특성들이 독립이라고 가정
 - Normally distributed: 많은 통계 방법이 정규성을 가정
