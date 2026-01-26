@@ -1,6 +1,6 @@
 ---
-title: ML Systems Model Development & Training
-date: 2026-01-13 12:00:00 +09:00
+title: ML Systems Tracking & Versioning
+date: 2026-01-26 10:00:00 +09:00
 categories: ['mlops']
 tags: ['mlops', 'tracking', 'versioning', 'automl']
 ---
