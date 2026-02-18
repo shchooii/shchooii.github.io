@@ -118,7 +118,7 @@ George Box의 말처럼 “모든 모델은 틀리지만, 어떤 모델은 유�
 - Prediction assumption: X로부터 Y를 예측할 수 있다고 가정
 - IID: 샘플이 독립 동일 분포에서 나왔다고 가정
 - Smoothness: 비슷한 입력은 비슷한 출력을 낸다고 가정
-- Tractability: 생성 모델에서 $$P(Z|X)$$ 계산이 가능하다고 가정
+- Tractability: 생성 모델에서 확률 계산이 가능하다고 가정
 - Boundaries: 선형 분류기는 결정 경계가 선형이라고 가정
 - Conditional independence: Naive Bayes는 클래스 조건부로 특성들이 독립이라고 가정
 - Normally distributed: 많은 통계 방법이 정규성을 가정
