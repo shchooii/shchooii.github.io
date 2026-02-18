@@ -12,7 +12,7 @@ tags: ['mlops', 'tracking', 'versioning', 'automl']
 ---
 
 ## 핵심 개념: tracking vs versioning
-### Artifact(아티팩트)란 무엇입니까?
+### Artifact(아티팩트)란?
 - 실험 중 생성되는 파일/결과물을 의미합니다.
 - 예: loss curve, eval loss graph, 학습 로그, 중간 체크포인트, 중간 예측 결과, 분석 리포트 등입니다.
 - 아티팩트가 잘 관리되면 실험 간 비교, 디버깅, 재현성 확보가 쉬워집니다.
@@ -31,7 +31,7 @@ tags: ['mlops', 'tracking', 'versioning', 'automl']
 
 ---
 
-## Experiment tracking: 무엇을 추적해야 합니까?
+## Experiment tracking
 학습은 “모델을 babysitting 하는 과정”이라는 표현이 나올 정도로 변수와 문제가 많습니다. 따라서 추적의 목표는 문제 탐지, 원인 추정, 실험 비교입니다.
 
 ### 최소로도 반드시 권장되는 추적 항목
@@ -104,7 +104,7 @@ tags: ['mlops', 'tracking', 'versioning', 'automl']
 
 ---
 
-## Debugging ML models: 왜 더 어렵고, 무엇이 원인일 수 있습니까?
+## Debugging ML models
 ### ML 디버깅이 특히 어려운 이유
 - 조용히 실패합니다.
   - 코드가 돌아가고 loss가 줄어도, 예측은 틀릴 수 있습니다.
