@@ -8,16 +8,18 @@ tags: ['kakao', 'ai', 'ambassador', 'meetup']
 KANANA 429 AI 앰배서더 1기 밋업에 다녀왔다.  
 이번 밋업은 앞으로 어떤 활동이 진행되는지와 프로그램의 전체적인 방향성을 직접 확인할 수 있었던 자리였다.
 
-<table style="width:100%; border:0; border-collapse:collapse; margin: 1.2rem 0;">
-  <tr>
-    <td style="width:50%; text-align:center; vertical-align:top; padding:0 8px;">
-      <img src="/assets/images/kanana/10.png" alt="KANANA 429 선정 안내" style="width:100%; max-width:240px; height:auto; border-radius:10px;">
-    </td>
-    <td style="width:50%; text-align:center; vertical-align:top; padding:0 8px;">
-      <img src="/assets/images/kanana/8.png" alt="KANANA 429 모바일 카드" style="width:100%; max-width:240px; height:auto; border-radius:10px;">
-    </td>
-  </tr>
-</table>
+
+<div style="text-align:left !important; margin:1rem 0;">
+  <img src="/assets/images/kanana/10.png"
+       alt="KANANA 429 선정 안내"
+       width="220"
+       style="display:inline-block !important; margin:0 8px 0 0 !important; vertical-align:top;">
+  <img src="/assets/images/kanana/8.png"
+       alt="KANANA 429 모바일 카드"
+       width="220"
+       style="display:inline-block !important; margin:0 !important; vertical-align:top;">
+</div>
+
 
 ## 현장 분위기
 
