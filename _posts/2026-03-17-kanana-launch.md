@@ -14,7 +14,7 @@ KANANA 429 AI 앰배서더 1기 밋업에 다녀왔다.
        alt="KANANA 429 선정 안내"
        width="220"
        style="display:inline-block !important; margin:0 8px 0 0 !important; vertical-align:top;">
-  <img src="/assets/images/kanana/8.png"
+  <img src="/assets/images/kanana/81.png"
        alt="KANANA 429 모바일 카드"
        width="220"
        style="display:inline-block !important; margin:0 !important; vertical-align:top;">
