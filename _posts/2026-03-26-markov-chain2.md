@@ -617,9 +617,6 @@ $$
 $$
 형태입니다.
 
-따라서 이 강의 내용은 서로 다른 공식을 외우기보다,  
-first-step analysis라는 공통 원리를 이해하는 것이 훨씬 중요합니다.
-
 ## 맺음말
 
 > 지금까지 Markov chain의 steady-state behavior와 stationary distribution, birth-death process, absorbing state, absorbing probability, absorption time, mean first passage time, mean first recurrence time을 하나의 흐름으로 정리하였습니다. 
