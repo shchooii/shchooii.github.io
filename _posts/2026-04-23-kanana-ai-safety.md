@@ -5,7 +5,7 @@ categories: ['kanana']
 tags: ['kakao', 'ai', 'ambassador', 'meetup', 'AI safety']
 ---
 
-KANANA 429 활동의 일환으로 카카오 판교아지트에서 진행된 오프라인 밋업에 다녀왔습니다.
+KANANA 429 활동으로 카카오 판교아지트에서 진행된 오프라인 밋업에 다녀왔습니다.
 
 <p align="center">
   <img src="/assets/images/kanana2/intro.jpeg" alt="KANANA 429 AI Safety 세션" style="width:min(480px, 78%); height:auto; border-radius:10px;">
