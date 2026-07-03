@@ -5,8 +5,6 @@ categories: ['kanana']
 tags: ['kakao', 'ai', 'ambassador', 'meetup', 'mcp']
 ---
 
-## 들어가며
-
 6월 KANANA 429 온라인 세션에서는 Kanana-o 리뷰, PlayMCP 공모전 **Agentic Player 10**, Kanana in KakaoTalk 업데이트가 소개되었습니다. 이번 글에서는 그중 MCP와 PlayMCP를 중심으로 정리해보려고 합니다.
 
 최근 AI 서비스는 사용자의 질문에 답하는 역할을 넘어, 외부 도구를 호출하고 실제 작업 흐름과 연결되는 방향으로 발전하고 있습니다. 사용자가 자연어로 요청하면 AI가 필요한 기능을 선택하고, 외부 시스템과 연결해 결과를 제공합니다.
