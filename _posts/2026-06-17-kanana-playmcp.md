@@ -1,6 +1,6 @@
 ---
 title: KANANA PlayMCP
-date: 2026-06-01 16:29:32 +09:00
+date: 2026-06-17 17:29:32 +09:00
 categories: ['kanana']
 tags: ['kakao', 'ai', 'ambassador', 'meetup', 'mcp']
 ---
